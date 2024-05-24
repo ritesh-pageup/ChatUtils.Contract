@@ -9,14 +9,14 @@ namespace ChatUtils.Contract.Models
 {
     public class Chatbox
     {
-        public int Id { get; set; }
-        public int? MessageId { get; set; }
-        public int EmployeeId { get; set; }
-        public int RecieverId { get; set; }
+        public long Id { get; set; }
+        public long? MessageId { get; set; }
+        public long EmployeeId { get; set; }
+        public long RecieverId { get; set; }
         public string? EmployeeName { get; set; }   
         public string? RecieverName { get; set; }
-        public int RecieverCount { get; set; } = 0;
-        public int? ReceiverMessageId { get; set; } 
+        public long RecieverCount { get; set; } = 0;
+        public long? ReceiverMessageId { get; set; } 
         [ForeignKey(nameof(MessageId))]
         public CommunityMessage? CommunityMessage { get; set; }
         [ForeignKey(nameof(ReceiverMessageId))]

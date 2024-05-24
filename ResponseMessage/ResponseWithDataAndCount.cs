@@ -9,6 +9,6 @@ namespace ChatUtils.Contract.ResponseMessage
     public class ResponseWithDataAndCount<T> : ResponseMsg
     {
         public List<T> IterableData { get; set; }
-        public int Count { get; set; }
+        public long Count { get; set; }
     }
 }

@@ -11,10 +11,10 @@ namespace ChatUtils.Contract.Interfaces
 {
     public interface IPusherMessageService
     {
-        public Task<ResponseMsg> TriggeredBySeen(int ReceiverId, bool status, int SenderId);
-        public Task<ResponseMsg> TriggeredByTyping(int ReceiverId, bool status, int SenderId);
-        public Task<ResponseMsg> TriggeredByOnline(int RecieverId, bool status, int SenderId);
-        //public Task<ResponseMsg> TriggeredByRecentActive(RecentActiveDto activeDto, IEnumerable<Claim> claim);
-        //public Task<ResponseWIthEterableMessage<RecentActiveResponse>> GetRecentActive(List<int> SenderIds, IEnumerable<Claim> claim);
+        public Task<ResponseMsg> TriggeredBySeen(long ReceiverId, bool status, long SenderId);
+        public Task<ResponseMsg> TriggeredByTyping(long ReceiverId, bool status, long SenderId);
+        public Task<ResponseMsg> TriggeredByOnline(long RecieverId, bool status, long SenderId);
+        public Task<ResponseMsg> TriggeredByRecentActive(RecentActiveDto activeDto, long SenderId);
+        public Task<ResponseWIthEterableMessage<RecentActiveResponse>> GetRecentActive(List<long> SenderIds, long UserId);
     }
 }

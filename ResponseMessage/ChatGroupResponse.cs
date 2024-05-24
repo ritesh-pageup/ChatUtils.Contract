@@ -1,4 +1,5 @@
-﻿using ChatUtils.Contract.Dtos.CommunityMessageDto;
+﻿using ChatUtils.Contract.Dtos;
+using ChatUtils.Contract.Dtos.CommunityMessageDto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace ChatUtils.Contract.ResponseMessage
 {
     public class ChatGroupResponse: ResponseMsg
     {
+        public List<ChatUserDto>? Users { get; set; }
         public ChatGroupDto? ChatGroup { get; set; }
-        public int Count { get; set; }
+        public long Count { get; set; }
     }
 }

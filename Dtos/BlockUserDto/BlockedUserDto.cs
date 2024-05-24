@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChatUtils.Contract.Dtos.CommunityMessageDto
+namespace ChatUtils.Contract.Dtos.BlockUserDto
 {
-    public class NewChatBoxDto: ChatBoxDto
+    public class BlockedUserDto
     {
         public long Id { get; set; }
+        public string? Name { get; set; }
     }
 }

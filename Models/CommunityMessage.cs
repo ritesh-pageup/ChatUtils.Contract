@@ -9,12 +9,12 @@ namespace ChatUtils.Contract.Models
 {
     public class CommunityMessage
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string? Message { get; set; }
-        public int EmployeeId { get; set; }
+        public long EmployeeId { get; set; }
         //public string? EmployeeName { get; set; }
-        public int? RecieverId { get; set; }
-        //public int DepartmentId { get; set; }
+        public long? RecieverId { get; set; }
+        //public long DepartmentId { get; set; }
         //public string? UserType { get; set; }
         //public bool IsSeen { get; set; } = false;
         public DateTime MessageDate { get; set; }
@@ -24,8 +24,8 @@ namespace ChatUtils.Contract.Models
         //public bool IsReceiverDeleted { get; set; }
         public bool IsGroup { get; set; } = false;
         public MessageStatus Status { get; set; }
-        public List<int>? DeletedIds { get; set; }
+        public List<long>? DeletedIds { get; set; }
         public bool IsActive { get; set; } = true;
-        public List<int>? SeenIds { get; set; }
+        public List<long>? SeenIds { get; set; }
     }
 }

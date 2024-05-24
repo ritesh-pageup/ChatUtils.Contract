@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChatUtils.Contract.Dtos.CommunityMessageDto
+namespace ChatUtils.Contract.Interfaces
 {
-    public class NewChatBoxDto: ChatBoxDto
+    public interface IChatUserService
     {
-        public long Id { get; set; }
+        public Task<bool> AddAsync(long UserId);
     }
 }

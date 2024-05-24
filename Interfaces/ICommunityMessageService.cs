@@ -20,7 +20,7 @@ namespace ChatUtils.Contract.Interfaces
         /// <param name="claim"></param>
         /// <param name="RecieverId"></param>
         /// <returns>ResponseMsg</returns>
-        public Task<ResponseWithObjectMessage<MessageBoxDto>> SendMessage(MessageDto messageDto, int SenderId, int? RecieverId, bool isBlockedMe);
+        public Task<ResponseWithObjectMessage<MessageBoxDto>> SendMessage(MessageDto messageDto, long SenderId, long? RecieverId, bool isBlockedMe);
 
         /// <summary>
         /// This method is used for fetch user Conversation between two Employee
@@ -28,26 +28,26 @@ namespace ChatUtils.Contract.Interfaces
         /// <param name="claim"></param>
         /// <param name="RecieverId"></param>
         /// <returns>ResponseWIthEterableMessage - Return a Response with List of MessageBoxDto object</returns>
-        public Task<ResponseWithObjectMessage<MessageBoxTokenDto>> DisplayMessage(int SenderId, int? RecieverId, MessagePageDto pageDto, bool IsGroup, bool isBlockedUser);
+        public Task<ResponseWithObjectMessage<MessageBoxTokenDto>> DisplayMessage(long SenderId, long? RecieverId, MessagePageDto pageDto, bool IsGroup, bool isBlockedUser);
 
         /// <summary>
         /// This method is used for Delete the message by it's Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns>ResponseMsg</returns>
-        public Task<ResponseMsg> DeleteMessage(MultipleOperationDto dto, int SenderId);
+        public Task<ResponseMsg> DeleteMessage(MultipleOperationDto dto, long SenderId);
 
         /// <summary>
         /// This method is used for getting all Chats between Employee with Last message.
         /// </summary>
         /// <param name="claim"></param>
         /// <returns>ResponseWIthEterableMessage - Return a Response with List of ChatBoxDto object</returns>
-        public Task<ResponseWIthEterableMessage<ChatBoxDto>> GetChatBox(int SenderId);
-        public Task<ResponseMsg> DeleteChatBox(int ReceiverID, int SenderId, bool IsGroup);
-        public Task<ResponseMsg> CreateGroup(ChatGroupDto chatGroupDto, int UserId);
-        public Task<ResponseMsg> UpdateGroup(ChatGroupDto chatGroupDto, int UserId);
-        public Task<ChatGroupResponse> GetChatGroup(int Id, int SenderId);
-        public Task<ResponseMsg> MessageReached(int UserId);
-        public Task<ResponseWithDataAndCount<ChatGroupDto>> GetChatGroups(int SenderId);
+        public Task<ResponseWIthEterableMessage<ChatBoxDto>> GetChatBox(long SenderId);
+        public Task<ResponseMsg> DeleteChatBox(long ReceiverID, long SenderId, bool IsGroup);
+        public Task<ResponseMsg> CreateGroup(ChatGroupDto chatGroupDto, long UserId);
+        public Task<ResponseMsg> UpdateGroup(ChatGroupDto chatGroupDto, long UserId);
+        public Task<ChatGroupResponse> GetChatGroup(long Id, long SenderId);
+        public Task<ResponseMsg> MessageReached(long UserId);
+        public Task<ResponseWithDataAndCount<ChatGroupDto>> GetChatGroups(long SenderId);
     }
 }

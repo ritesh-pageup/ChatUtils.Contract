@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChatUtils.Contract.Models
 {
-    public class UserGroup
+    public class ChatUser
     {
         public long Id { get; set; }   
-        public int UserId { get; set; }
-        public List<int>? GroupIds { get; set; }
+        public long UserId { get; set; }
+        public List<long>? GroupIds { get; set; }
+        public string? RecentChat { get; set; }
+        public bool? IsGroup { get; set; }
     }
 }

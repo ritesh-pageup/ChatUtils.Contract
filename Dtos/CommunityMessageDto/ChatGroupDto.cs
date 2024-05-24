@@ -8,9 +8,9 @@ namespace ChatUtils.Contract.Dtos.CommunityMessageDto
 {
     public class ChatGroupDto
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string GroupName { get; set; }
-        public List<int>? EmployeeIds { get; set; }
-        public List<int>? Admins { get; set; }
+        public List<long>? EmployeeIds { get; set; }
+        public List<long>? Admins { get; set; }
     }
 }

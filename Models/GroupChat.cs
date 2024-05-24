@@ -8,10 +8,10 @@ namespace ChatUtils.Contract.Models
 {
     public class GroupChat
     {
-        public int Id { get; set; }
-        public List<int>? EmployeeIds { get; set; }
+        public long Id { get; set; }
+        public List<long>? EmployeeIds { get; set; }
         public string GroupName { get; set; }
-        public List<int>? Admins { get; set; }
+        public List<long>? Admins { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? LastUpdatedDate { get; set;}
     }

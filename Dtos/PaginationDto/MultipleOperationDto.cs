@@ -8,8 +8,8 @@ namespace ChatUtils.Contract.Dtos.PaginationDto
 {
     public class MultipleOperationDto
     {
-        public List<int> Ids { get; set; }
-        public int RecieverId { get; set; }
+        public List<long> Ids { get; set; }
+        public long RecieverId { get; set; }
         public bool IsGroup { get; set; }
         public bool DeleteForEveryone { get; set; }
     }

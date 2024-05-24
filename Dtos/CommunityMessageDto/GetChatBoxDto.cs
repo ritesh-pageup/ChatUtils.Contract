@@ -9,8 +9,8 @@ namespace ChatUtils.Contract.Dtos.CommunityMessageDto
 {
     public class GetChatBoxDto
     {
-        public int EmployeeId { get; set; }
-        public int Count { get; set; }
+        public long EmployeeId { get; set; }
+        public long Count { get; set; }
         public CommunityMessage? CommunityMessagge { get; set; }
     }
 }
