@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ChatUtils.Contract.ResponseMessage
 {
-    public class ResponseWithObjectMessage<T> : ResponseMsg
+    public class SetSystemTokenRequest
     {
-        public T? Data { get; set; }
+        public string? SystemToken { get; set; }
     }
 }

@@ -8,7 +8,9 @@ namespace ChatUtils.Contract.Dtos
 {
     public class ChatUserDto
     {
-        public long UserId { get; set; }
+        public long Id { get; set; }
         public string? Name { get; set; }
+        public string? Email { get; set; }
+        public string? SystemToken { get; set; }
     }
 }

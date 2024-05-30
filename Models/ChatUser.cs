@@ -13,5 +13,6 @@ namespace ChatUtils.Contract.Models
         public List<long>? GroupIds { get; set; }
         public string? RecentChat { get; set; }
         public bool? IsGroup { get; set; }
+        public string? FirebaseToken { get; set; }
     }
 }
